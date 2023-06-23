@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:src="http://schemas.android.com/tools">
+
+    <item
+        android:icon="@drawable/ic_home"
+        android:id="@+id/homeMenu"
+        android:title="Home" />
+    <item
+        android:icon="@drawable/ic_products"
+        android:id="@+id/productMenu"
+        android:title="Product" />
+    <item
+        android:icon="@drawable/ic_account_circle"
+        android:id="@+id/profileMenu"
+        android:title="Profile" />
+    <item
+        android:icon="@drawable/baseline_more_horiz_24"
+        android:id="@+id/moreMenu"
+        android:title="More" />
+</menu>
