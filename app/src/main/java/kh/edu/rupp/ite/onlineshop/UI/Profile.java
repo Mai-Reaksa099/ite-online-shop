@@ -49,7 +49,7 @@ public class Profile extends Fragment {
 
         Gson gson = new GsonBuilder().setLenient().create();
 
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("https://raw.githubusercontent.com/kimsongsao/ferupp/main/profile.json").addConverterFactory(GsonConverterFactory.create(gson)).build();
+        Retrofit retrofit = new Retrofit.Builder().baseUrl("https://raw.githubusercontent.com/").addConverterFactory(GsonConverterFactory.create(gson)).build();
 
         ServiceAPI serviceAPI = retrofit.create(ServiceAPI.class);
 
