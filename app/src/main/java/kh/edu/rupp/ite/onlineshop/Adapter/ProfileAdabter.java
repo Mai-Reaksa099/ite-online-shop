@@ -18,7 +18,6 @@ public class ProfileAdabter extends RecyclerView.Adapter<ProfileAdabter.ProfileV
 
     private final List<Profiles> profileData = new ArrayList<>();
 
-
     @NonNull
     @Override
     public ProfileViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -55,14 +54,22 @@ public class ProfileAdabter extends RecyclerView.Adapter<ProfileAdabter.ProfileV
             this.profileHolderBinding = ProfileitemView;
         }
         public void bind (Profiles profiles){
-            Picasso.get().load(profiles.getImageUrl()).into(profileHolderBinding.imgProfiles);
-            profileHolderBinding.txtFirstName.setText(profiles.getFirst_name());
-            profileHolderBinding.lastName.setText(profiles.getLast_name());
-            profileHolderBinding.txtEmail.setText(profiles.getEmail());
-            profileHolderBinding.emailTxt1.setText(profiles.getEmail());
-            profileHolderBinding.txtGender1.setText(profiles.getGender());
-            profileHolderBinding.txtNumber1.setText(profiles.getPhoneNumber());
-            profileHolderBinding.txtBirthday1.setText(profiles.getBirthday());
+//            Picasso.get().load(profiles.getImageUrl()).into(profileHolderBinding.imgProfiles);
+//            profileHolderBinding.txtFirstName.setText(profiles.getFirst_name());
+//            profileHolderBinding.lastName.setText(profiles.getLast_name());
+//            profileHolderBinding.txtEmail.setText(profiles.getEmail());
+//            profileHolderBinding.emailTxt1.setText(profiles.getEmail());
+//            profileHolderBinding.txtGender1.setText(profiles.getGender());
+//            profileHolderBinding.txtNumber1.setText(profiles.getPhoneNumber());
+//            profileHolderBinding.txtBirthday1.setText(profiles.getBirthday());
+//            profileHolderBinding.txtAddress.setText(profiles.getAddress());
+
+            Picasso.get().load(profiles.getImageUrl()).into(profileHolderBinding.imageProfile);
+            profileHolderBinding.textPrice.setText(profiles.getGender());
+            profileHolderBinding.textDescription.setText(profiles.getPhoneNumber());
+            profileHolderBinding.textRating.setText(profiles.getBirthday());
+            profileHolderBinding.textDescription.setText(profiles.getAddress());
+
         }
     }
 

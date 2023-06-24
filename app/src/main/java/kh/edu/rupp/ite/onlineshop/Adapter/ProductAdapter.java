@@ -57,11 +57,15 @@ public class ProductAdapter extends ListAdapter<Products, ProductAdapter.Product
         }
         public void bind(Products product){
 
-            Picasso.get().load(product.getImageurl()).into(bindingProduct.imgProduct);
-            bindingProduct.txtName.setText(product.getName());
-            bindingProduct.txtPrice.setText("$" + (product.getPrice()));
-            bindingProduct.txtDes.setText(product.getDescription());
-            bindingProduct.txtRating.setText("Rating"+ " " + (product.getRating()));
+//            Picasso.get().load(product.getImageurl()).into(bindingProduct.imgProduct);
+//            bindingProduct.txtName.setText(product.getName());
+//            bindingProduct.txtPrice.setText("$" + (product.getPrice()));
+//            bindingProduct.txtDes.setText(product.getDescription());
+//            bindingProduct.txtRating.setText("Rating"+ " " + (product.getRating()));
+
+            Picasso.get().load(product.getImageurl()).into(bindingProduct.imgUser);
+            bindingProduct.textPrice.setText("$" + (product.getPrice()));
+            bindingProduct.textRate.setText("Rating"+ " " + (product.getRating()));
 
 
         }

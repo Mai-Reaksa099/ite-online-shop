@@ -70,5 +70,12 @@ public class Profiles {
     @SerializedName("image-url")
     private String imageUrl;
     private String birthday;
+    private String address;
+    public String getAddress(){
+        return address;
+    }
+    public void setAddress(String address){
+        this.address = address;
+    }
 
 }
