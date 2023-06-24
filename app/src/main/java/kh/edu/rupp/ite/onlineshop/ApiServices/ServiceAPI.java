@@ -9,10 +9,10 @@ import retrofit2.http.GET;
 
 public interface ServiceAPI {
 
-    @GET("Midterm/Products/products.json")
+    @GET("kimsongsao/ferupp/main/products.json")
      Call<List<Products>> loadProducts();
 
-    @GET("Midterm/Profile/profile.json")
+    @GET("kimsongsao/ferupp/main/profile.json")
     Call <Profiles> loadProfile();
 
 }

@@ -12,6 +12,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 
@@ -46,7 +47,7 @@ public class Product extends Fragment {
     private void loadProdust(){
 
         Gson gson = new GsonBuilder().setLenient().create();
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("https://raw.githubusercontent.com/kimsongsao/ferupp/main/profile.json").addConverterFactory(GsonConverterFactory.create(gson)).build();
+        Retrofit retrofit = new Retrofit.Builder().baseUrl("https://raw.githubusercontent.com/").addConverterFactory(GsonConverterFactory.create(gson)).build();
 
         ServiceAPI serviceAPI = retrofit.create(ServiceAPI.class);
         Call<List<Products>> task = serviceAPI.loadProducts();
@@ -72,8 +73,9 @@ public class Product extends Fragment {
 
     private void ShowLoadingProduct(List<Products> products){
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
-        binding.productRecycler.setLayoutManager(linearLayoutManager);
+        //LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
+        binding.productRecycler.setLayoutManager(gridLayoutManager);
 
         ProductAdapter productAdapter = new ProductAdapter();
         productAdapter.submitList(products);
